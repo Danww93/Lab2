@@ -35,7 +35,7 @@ public class Hand
 		}
 	}
 	
-	public boolean isPair()
+	public boolean Pair()
 	{
 		int temp;
 		int counter = 0;
@@ -47,11 +47,69 @@ public class Hand
 			{
 				if(x != y)
 				{
-					
+					if(temp == hand.get(y).getValue());
+					{
+						counter++;
+					}
+				}
+				
+				if(counter == 2)
+				{
+					return true;
 				}
 			}
 		}
-						
+			return false;			
+	}
+	
+	public boolean ThreeOfAKind()
+	{
+		int temp;
+		int counter = 0;
+		
+		for(int x = 0; x < 5; x++)
+		{
+			temp = hand.get(x).getValue();
+			for(int y = 0; y < 5; y++)
+			{
+				if(x != y)
+				{
+					if(temp == hand.get(y).getValue());
+					{
+						counter++;
+					}
+				}
+				
+				if(counter == 3)
+				{
+					return true;
+				}
+			}
+		}
+			return false;
+		
+	}
+	
+	public boolean Flush()
+	{
+		 
+		String suit = hand.get(0).getSuit(); 
+		 for (int i = 1; i < 5; i++)
+		 { 
+			if (!suit.equals(hand.get(i).getSuit())) 
+			{ 
+				return false; 
+			}
+		 } 
+		return true;
+		 
+
+
+	}
+	
+	public boolean FourOfAKind()
+	{
+		
 	}
 
 }

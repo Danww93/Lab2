@@ -7,13 +7,13 @@ public class Play
 	
 	public static void main(String[] args)
 	{
-		FiveCards game = new FiveCards();
+		Play game = new Play();
 		
-		game.showDeck();
+		
 		game.shuffleDeck();
 		game.showHand();
 		
-		System.out.println("Dealing hand... \n");
+		System.out.println("Dealing hands... \n");
 		game.dealNewHand();
 		game.showHand();
 		game.gradeHand();
